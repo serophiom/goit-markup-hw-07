@@ -36,6 +36,14 @@
   background-color: $primary-white-color;
   border-color: rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+    cursor: pointer;
+
+    transition: $tansition-hover;
+  }
 }
 
 .close-icon {
@@ -94,6 +102,19 @@
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  &:focus {
+    outline: none;
+    border-color: $accent-color;
+
+    transition: $tansition-hover;
+  }
+
+  &:focus + .modal-icon {
+    color: $accent-color;
+
+    transition: $tansition-hover;
+  }
 }
 
 .modal-icon {
@@ -112,19 +133,6 @@
   position: relative;
 
   color: $primary-text-color;
-}
-
-.modal-input:focus {
-  outline: none;
-  border-color: $accent-color;
-
-  transition: $tansition-hover;
-}
-
-.modal-input:focus + .modal-icon {
-  color: $accent-color;
-
-  transition: $tansition-hover;
 }
 
 .textarea {
